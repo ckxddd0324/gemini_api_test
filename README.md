@@ -8,6 +8,9 @@ API test for Gemini /v1/order/new endpoint
 	2. source test_env/bin/activate
 	3. pip3 install -r requirements.txt
 
+## Setup API key and secret
+Copy the .env_sample and rename it to .env. Then update the key and secret with your created credential. 
+
 ## Run test
 `Run the following command on terminal- nose2 `
 
