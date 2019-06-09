@@ -12,7 +12,7 @@ def create_order_playload(request,
                         amount,
                         price,
                         side,
-                        *options,
+                        options,
                         timestamp_format="string",
                         timestamp_unit="second",
                         with_client_order_id=None):
@@ -30,7 +30,7 @@ def create_order_playload(request,
         "price": price,
         "side": side,
         "type": "exchange limit",
-        "options": list(options)
+        "options": options
     }
 
     if with_client_order_id:
