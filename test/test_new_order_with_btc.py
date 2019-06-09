@@ -36,7 +36,7 @@ class test_btc_new_order(unittest.TestCase):
                                                amount,
                                                price,
                                                side,
-                                               options,
+                                               options=options,
                                                with_client_order_id=client_order_id)
 
         e_payload = helper.encrypted_payload(payload)
@@ -71,7 +71,7 @@ class test_btc_new_order(unittest.TestCase):
                                                amount,
                                                price,
                                                side,
-                                               options)
+                                               options=options)
 
         e_payload = helper.encrypted_payload(payload)
         e_signature = helper.encrypted_signature(gemini_api_secret, e_payload)
@@ -133,7 +133,8 @@ class test_btc_new_order(unittest.TestCase):
                                                currency_symbol,
                                                amount,
                                                price,
-                                               side)
+                                               side,
+                                               options=options)
 
         e_payload = helper.encrypted_payload(payload)
         e_signature = helper.encrypted_signature(gemini_api_secret, e_payload)
@@ -229,7 +230,8 @@ class test_btc_new_order(unittest.TestCase):
                                                currency_symbol,
                                                amount,
                                                price,
-                                               side)
+                                               side,
+                                               options=[options])
 
         e_payload = helper.encrypted_payload(payload)
         e_signature = helper.encrypted_signature(gemini_api_secret, e_payload)
@@ -386,7 +388,7 @@ class test_btc_new_order(unittest.TestCase):
                                                amount,
                                                price,
                                                side,
-                                               options)
+                                               options=options)
 
         e_payload = helper.encrypted_payload(payload)
         e_signature = helper.encrypted_signature(gemini_api_secret, e_payload)
@@ -414,7 +416,7 @@ class test_btc_new_order(unittest.TestCase):
                                                amount,
                                                price,
                                                side,
-                                               options)
+                                               options=options)
 
         e_payload = helper.encrypted_payload(payload)
         e_signature = helper.encrypted_signature(gemini_api_secret, e_payload)
@@ -442,7 +444,7 @@ class test_btc_new_order(unittest.TestCase):
                                                amount,
                                                price,
                                                side,
-                                               options)
+                                               options=options)
 
         e_payload = helper.encrypted_payload(payload)
         e_signature = helper.encrypted_signature(gemini_api_secret, e_payload)
@@ -470,7 +472,7 @@ class test_btc_new_order(unittest.TestCase):
                                                amount,
                                                price,
                                                side,
-                                               options)
+                                               options=options)
 
         e_payload = helper.encrypted_payload(payload)
         e_signature = helper.encrypted_signature(gemini_api_secret, e_payload)
@@ -501,7 +503,7 @@ class test_btc_new_order(unittest.TestCase):
                                                amount,
                                                price,
                                                side,
-                                               options)
+                                               options=options)
 
         e_payload = helper.encrypted_payload(payload)
         e_signature = helper.encrypted_signature(gemini_api_secret, e_payload)
@@ -531,7 +533,7 @@ class test_btc_new_order(unittest.TestCase):
                                                amount,
                                                price,
                                                side,
-                                               options)
+                                               options=options)
 
         e_payload = helper.encrypted_payload(payload)
         e_signature = helper.encrypted_signature(gemini_api_secret, e_payload)
@@ -563,7 +565,7 @@ class test_btc_new_order(unittest.TestCase):
                                                amount,
                                                price,
                                                side,
-                                               options)
+                                               options=options)
 
         e_payload = helper.encrypted_payload(payload)
         e_signature = helper.encrypted_signature(gemini_api_secret, e_payload)
@@ -669,7 +671,8 @@ class test_btc_new_order(unittest.TestCase):
                                                currency_symbol,
                                                amount,
                                                price,
-                                               side)
+                                               side,
+                                               options=options)
 
         e_payload = helper.encrypted_payload(payload)
         e_signature = helper.encrypted_signature(gemini_api_secret, e_payload)
@@ -696,7 +699,8 @@ class test_btc_new_order(unittest.TestCase):
                                                currency_symbol,
                                                amount,
                                                price,
-                                               side)
+                                               side,
+                                               options=options)
 
         e_payload = helper.encrypted_payload(payload)
         e_signature = helper.encrypted_signature(gemini_api_secret, e_payload)
@@ -753,7 +757,7 @@ class test_btc_new_order(unittest.TestCase):
                                                amount,
                                                price,
                                                side,
-                                               options)
+                                               options=options)
 
         e_payload = helper.encrypted_payload(payload)
         e_signature = helper.encrypted_signature(gemini_api_secret, e_payload)
@@ -786,7 +790,7 @@ class test_btc_new_order(unittest.TestCase):
                                                amount,
                                                price,
                                                side,
-                                               options,
+                                               options=options,
                                                with_client_order_id=client_order_id)
 
         e_payload = helper.encrypted_payload(payload)
@@ -821,7 +825,7 @@ class test_btc_new_order(unittest.TestCase):
                                                amount,
                                                price,
                                                side,
-                                               options,
+                                               options=options,
                                                with_client_order_id=client_order_id)
 
         e_payload = helper.encrypted_payload(payload)
@@ -851,7 +855,7 @@ class test_btc_new_order(unittest.TestCase):
                                                amount,
                                                price,
                                                side,
-                                               options,
+                                               options=options,
                                                with_client_order_id=client_order_id)
 
         e_payload = helper.encrypted_payload(payload)
@@ -881,7 +885,7 @@ class test_btc_new_order(unittest.TestCase):
                                                amount,
                                                price,
                                                side,
-                                               options,
+                                               options=options,
                                                with_client_order_id=client_order_id)
 
         e_payload = helper.encrypted_payload(payload)
