@@ -1,5 +1,6 @@
 # gemini_api_test
 API test for Gemini /v1/order/new endpoint
+The tests are going to primarily focusing on the currency symbo- btcusd.
 
 # Installation 
 - Install Python 3.7
