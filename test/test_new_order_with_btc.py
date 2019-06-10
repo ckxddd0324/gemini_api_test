@@ -88,7 +88,6 @@ class test_btc_new_order(unittest.TestCase):
         assert response_in_json['side'] == "buy"
         assert response_in_json['option'] == []
         assert response_in_json['original_amount'] == amount
-        assert 'client_order_id' in == client_order_id
         assert float(response_in_json['executed_amount']) + float(response_in_json['remaining_amount']) == int(5)
         self.assertLessEqual(float(response_in_json['avg_execution_price']), float(price))
 
