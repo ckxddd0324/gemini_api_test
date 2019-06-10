@@ -48,16 +48,16 @@ class test_btc_new_order(unittest.TestCase):
                                       headers=request_headers)
         response_in_json = self.response.json()
 
-        # assert self.response.status_code == 400
-        # assert response_in_json['symbol'] == currency_symbol
-        # assert response_in_json['type'] == "exchange limit"
-        # assert response_in_json['side'] == "buy"
-        # assert response_in_json['option'] == []
-        # assert response_in_json['original_amount'] == amount
-        # assert response_in_json['client_order_id'] == client_order_id
-        # assert float(response_in_json['executed_amount']) + float(response_in_json['remaining_amount']) == int(5)
-        # assert response_in_json['client_order_id'] == client_order_id
-        # self.assertLessEqual(float(response_in_json['avg_execution_price']), float(price))
+        assert self.response.status_code == 400
+        assert response_in_json['symbol'] == currency_symbol
+        assert response_in_json['type'] == "exchange limit"
+        assert response_in_json['side'] == "buy"
+        assert response_in_json['option'] == []
+        assert response_in_json['original_amount'] == amount
+        assert response_in_json['client_order_id'] == client_order_id
+        assert float(response_in_json['executed_amount']) + float(response_in_json['remaining_amount']) == int(5)
+        assert response_in_json['client_order_id'] == client_order_id
+        self.assertLessEqual(float(response_in_json['avg_execution_price']), float(price))
 
     def test_buy_btc_usd_with_standard_order_via_empty_array_without_client_id(self):
         currency_symbol = "btcusd"
@@ -82,15 +82,15 @@ class test_btc_new_order(unittest.TestCase):
                                       headers=request_headers)
         response_in_json = self.response.json()
 
-        # assert self.response.status_code == 400
-        # assert response_in_json['symbol'] == currency_symbol
-        # assert response_in_json['type'] == "exchange limit"
-        # assert response_in_json['side'] == "buy"
-        # assert response_in_json['option'] == []
-        # assert response_in_json['original_amount'] == amount
-        # assert 'client_order_id' in == client_order_id
-        # assert float(response_in_json['executed_amount']) + float(response_in_json['remaining_amount']) == int(5)
-        # self.assertLessEqual(float(response_in_json['avg_execution_price']), float(price))
+        assert self.response.status_code == 400
+        assert response_in_json['symbol'] == currency_symbol
+        assert response_in_json['type'] == "exchange limit"
+        assert response_in_json['side'] == "buy"
+        assert response_in_json['option'] == []
+        assert response_in_json['original_amount'] == amount
+        assert 'client_order_id' in == client_order_id
+        assert float(response_in_json['executed_amount']) + float(response_in_json['remaining_amount']) == int(5)
+        self.assertLessEqual(float(response_in_json['avg_execution_price']), float(price))
 
     def test_buy_btc_usd_with_standard_order_with_no_options_provided(self):
         currency_symbol = "btcusd"
@@ -113,14 +113,14 @@ class test_btc_new_order(unittest.TestCase):
                                       headers=request_headers)
         response_in_json = self.response.json()
 
-        # assert self.response.status_code == 400
-        # assert response_in_json['symbol'] == currency_symbol
-        # assert response_in_json['type'] == "exchange limit"
-        # assert response_in_json['side'] == "buy"
-        # assert response_in_json['option'] == []
-        # assert response_in_json['original_amount'] == amount
-        # assert float(response_in_json['executed_amount']) + float(response_in_json['remaining_amount']) == int(5)
-        # self.assertLessEqual(float(response_in_json['avg_execution_price']), float(price))
+        assert self.response.status_code == 400
+        assert response_in_json['symbol'] == currency_symbol
+        assert response_in_json['type'] == "exchange limit"
+        assert response_in_json['side'] == "buy"
+        assert response_in_json['option'] == []
+        assert response_in_json['original_amount'] == amount
+        assert float(response_in_json['executed_amount']) + float(response_in_json['remaining_amount']) == int(5)
+        self.assertLessEqual(float(response_in_json['avg_execution_price']), float(price))
 
     def test_buy_btc_usd_with_standard_order_with_maker_or_cancel_options_provided(self):
         currency_symbol = "btcusd"
@@ -145,15 +145,15 @@ class test_btc_new_order(unittest.TestCase):
                                       headers=request_headers)
         response_in_json = self.response.json()
 
-        # assert self.response.status_code == 201
-        # assert response_in_json['symbol'] == currency_symbol
-        # assert response_in_json['type'] == "exchange limit"
-        # assert response_in_json['side'] == "buy"
-        # assert response_in_json['option'] == []
-        # assert response_in_json['is_cancelled'] == True
-        # assert response_in_json['original_amount'] == amount
-        # assert float(response_in_json['executed_amount']) + float(response_in_json['remaining_amount']) == int(5)
-        # self.assertLessEqual(float(response_in_json['avg_execution_price']), float(price))
+        assert self.response.status_code == 201
+        assert response_in_json['symbol'] == currency_symbol
+        assert response_in_json['type'] == "exchange limit"
+        assert response_in_json['side'] == "buy"
+        assert response_in_json['option'] == []
+        assert response_in_json['is_cancelled'] == True
+        assert response_in_json['original_amount'] == amount
+        assert float(response_in_json['executed_amount']) + float(response_in_json['remaining_amount']) == int(5)
+        self.assertLessEqual(float(response_in_json['avg_execution_price']), float(price))
 
     def test_buy_btc_usd_with_standard_order_with_immediate_or_cancel_options_provided(self):
         currency_symbol = "btcusd"
@@ -177,15 +177,15 @@ class test_btc_new_order(unittest.TestCase):
                                       headers=request_headers)
         response_in_json = self.response.json()
 
-        # assert self.response.status_code == 201
-        # assert response_in_json['symbol'] == currency_symbol
-        # assert response_in_json['type'] == "exchange limit"
-        # assert response_in_json['side'] == "buy"
-        # assert response_in_json['option'] == []
-        # assert response_in_json['is_cancelled'] == True
-        # assert response_in_json['original_amount'] == amount
-        # assert float(response_in_json['executed_amount']) + float(response_in_json['remaining_amount']) == int(5)
-        # self.assertLessEqual(float(response_in_json['avg_execution_price']), float(price))
+        assert self.response.status_code == 201
+        assert response_in_json['symbol'] == currency_symbol
+        assert response_in_json['type'] == "exchange limit"
+        assert response_in_json['side'] == "buy"
+        assert response_in_json['option'] == []
+        assert response_in_json['is_cancelled'] == True
+        assert response_in_json['original_amount'] == amount
+        assert float(response_in_json['executed_amount']) + float(response_in_json['remaining_amount']) == int(5)
+        self.assertLessEqual(float(response_in_json['avg_execution_price']), float(price))
 
     def test_buy_btc_usd_with_standard_order_with_fill_or_kill_options_provided(self):
         currency_symbol = "btcusd"
@@ -209,15 +209,15 @@ class test_btc_new_order(unittest.TestCase):
                                       headers=request_headers)
         response_in_json = self.response.json()
 
-        # assert self.response.status_code == 201
-        # assert response_in_json['symbol'] == currency_symbol
-        # assert response_in_json['type'] == "exchange limit"
-        # assert response_in_json['side'] == "buy"
-        # assert response_in_json['option'] == []
-        # assert response_in_json['is_cancelled'] == True
-        # assert response_in_json['original_amount'] == amount
-        # assert float(response_in_json['executed_amount']) + float(response_in_json['remaining_amount']) == int(5)
-        # self.assertLessEqual(float(response_in_json['avg_execution_price']), float(price))
+        assert self.response.status_code == 201
+        assert response_in_json['symbol'] == currency_symbol
+        assert response_in_json['type'] == "exchange limit"
+        assert response_in_json['side'] == "buy"
+        assert response_in_json['option'] == []
+        assert response_in_json['is_cancelled'] == True
+        assert response_in_json['original_amount'] == amount
+        assert float(response_in_json['executed_amount']) + float(response_in_json['remaining_amount']) == int(5)
+        self.assertLessEqual(float(response_in_json['avg_execution_price']), float(price))
 
     def test_buy_btc_usd_with_standard_order_with_auction_only_options_provided(self):
         currency_symbol = "btcusd"
@@ -242,14 +242,14 @@ class test_btc_new_order(unittest.TestCase):
                                       headers=request_headers)
         response_in_json = self.response.json()
 
-        # assert self.response.status_code == 201
-        # assert response_in_json['symbol'] == currency_symbol
-        # assert response_in_json['type'] == "exchange limit"
-        # assert response_in_json['side'] == "buy"
-        # assert response_in_json['option'] == []
-        # assert response_in_json['original_amount'] == amount
-        # assert float(response_in_json['executed_amount']) + float(response_in_json['remaining_amount']) == int(5)
-        # self.assertLessEqual(float(response_in_json['avg_execution_price']), float(price))
+        assert self.response.status_code == 201
+        assert response_in_json['symbol'] == currency_symbol
+        assert response_in_json['type'] == "exchange limit"
+        assert response_in_json['side'] == "buy"
+        assert response_in_json['option'] == []
+        assert response_in_json['original_amount'] == amount
+        assert float(response_in_json['executed_amount']) + float(response_in_json['remaining_amount']) == int(5)
+        self.assertLessEqual(float(response_in_json['avg_execution_price']), float(price))
 
     def test_buy_btc_usd_with_standard_order_with_indication_of_interest_options_provided(self):
         currency_symbol = "btcusd"
@@ -272,14 +272,14 @@ class test_btc_new_order(unittest.TestCase):
                                       headers=request_headers)
         response_in_json = self.response.json()
 
-        # assert self.response.status_code == 201
-        # assert response_in_json['symbol'] == currency_symbol
-        # assert response_in_json['type'] == "exchange limit"
-        # assert response_in_json['side'] == "buy"
-        # assert response_in_json['option'] == []
-        # assert response_in_json['original_amount'] == amount
-        # assert float(response_in_json['executed_amount']) + float(response_in_json['remaining_amount']) == int(5)
-        # self.assertLessEqual(float(response_in_json['avg_execution_price']), float(price))
+        assert self.response.status_code == 201
+        assert response_in_json['symbol'] == currency_symbol
+        assert response_in_json['type'] == "exchange limit"
+        assert response_in_json['side'] == "buy"
+        assert response_in_json['option'] == []
+        assert response_in_json['original_amount'] == amount
+        assert float(response_in_json['executed_amount']) + float(response_in_json['remaining_amount']) == int(5)
+        self.assertLessEqual(float(response_in_json['avg_execution_price']), float(price))
 
     def test_buy_btc_usd_with_timestamp_in_ms_string_format(self):
         currency_symbol = "btcusd"
@@ -304,14 +304,14 @@ class test_btc_new_order(unittest.TestCase):
                                       headers=request_headers)
         response_in_json = self.response.json()
 
-        # assert self.response.status_code == 201
-        # assert response_in_json['symbol'] == currency_symbol
-        # assert response_in_json['type'] == "exchange limit"
-        # assert response_in_json['side'] == "buy"
-        # assert response_in_json['option'] == []
-        # assert response_in_json['original_amount'] == amount
-        # assert float(response_in_json['executed_amount']) + float(response_in_json['remaining_amount']) == int(5)
-        # self.assertLessEqual(float(response_in_json['avg_execution_price']), float(price))
+        assert self.response.status_code == 201
+        assert response_in_json['symbol'] == currency_symbol
+        assert response_in_json['type'] == "exchange limit"
+        assert response_in_json['side'] == "buy"
+        assert response_in_json['option'] == []
+        assert response_in_json['original_amount'] == amount
+        assert float(response_in_json['executed_amount']) + float(response_in_json['remaining_amount']) == int(5)
+        self.assertLessEqual(float(response_in_json['avg_execution_price']), float(price))
 
     def test_buy_btc_usd_with_timestamp_in_ms_int_format(self):
         currency_symbol = "btcusd"
@@ -336,14 +336,14 @@ class test_btc_new_order(unittest.TestCase):
                                       headers=request_headers)
         response_in_json = self.response.json()
 
-        # assert self.response.status_code == 201
-        # assert response_in_json['symbol'] == currency_symbol
-        # assert response_in_json['type'] == "exchange limit"
-        # assert response_in_json['side'] == "buy"
-        # assert response_in_json['option'] == []
-        # assert response_in_json['original_amount'] == amount
-        # assert float(response_in_json['executed_amount']) + float(response_in_json['remaining_amount']) == int(5)
-        # self.assertLessEqual(float(response_in_json['avg_execution_price']), float(price))
+        assert self.response.status_code == 201
+        assert response_in_json['symbol'] == currency_symbol
+        assert response_in_json['type'] == "exchange limit"
+        assert response_in_json['side'] == "buy"
+        assert response_in_json['option'] == []
+        assert response_in_json['original_amount'] == amount
+        assert float(response_in_json['executed_amount']) + float(response_in_json['remaining_amount']) == int(5)
+        self.assertLessEqual(float(response_in_json['avg_execution_price']), float(price))
 
     def test_buy_btc_usd_with_invalid_endpoint(self):
         currency_symbol = "btcusd"
@@ -371,10 +371,10 @@ class test_btc_new_order(unittest.TestCase):
                                       headers=request_headers)
         response_in_json = self.response.json()
 
-        # assert self.response.status_code == 400
-        # assert response_in_json['result'] == 'error'
-        # assert response_in_json['reason'] == 'EndpointNotFound'
-        # self.assertTrue('message' in response_in_json)
+        assert self.response.status_code == 400
+        assert response_in_json['result'] == 'error'
+        assert response_in_json['reason'] == 'EndpointNotFound'
+        self.assertTrue('message' in response_in_json)
 
     def test_buy_btc_usd_with_invalid_symbol(self):
         currency_symbol = "usdbtc"
@@ -399,10 +399,10 @@ class test_btc_new_order(unittest.TestCase):
                                       headers=request_headers)
         response_in_json = self.response.json()
 
-        # assert self.response.status_code == 400
-        # assert response_in_json['result'] == 'error'
-        # assert response_in_json['reason'] == 'InvalidSymbol'
-        # self.assertTrue('message' in response_in_json)
+        assert self.response.status_code == 400
+        assert response_in_json['result'] == 'error'
+        assert response_in_json['reason'] == 'InvalidSymbol'
+        self.assertTrue('message' in response_in_json)
 
     def test_buy_btc_usd_with_empty_symbol(self):
         currency_symbol = ""
@@ -427,10 +427,10 @@ class test_btc_new_order(unittest.TestCase):
                                       headers=request_headers)
         response_in_json = self.response.json()
 
-        # assert self.response.status_code == 400
-        # assert response_in_json['result'] == 'error'
-        # assert response_in_json['reason'] == 'InvalidSymbol'
-        # self.assertTrue('message' in response_in_json)
+        assert self.response.status_code == 400
+        assert response_in_json['result'] == 'error'
+        assert response_in_json['reason'] == 'InvalidSymbol'
+        self.assertTrue('message' in response_in_json)
 
     def test_buy_btc_usd_without_side_specific(self):
         currency_symbol = "usdbtc"
@@ -455,10 +455,10 @@ class test_btc_new_order(unittest.TestCase):
                                       headers=request_headers)
         response_in_json = self.response.json()
 
-        # assert self.response.status_code == 400
-        # assert response_in_json['result'] == 'error'
-        # assert response_in_json['reason'] == 'InvalidSide'
-        # self.assertTrue('message' in response_in_json)
+        assert self.response.status_code == 400
+        assert response_in_json['result'] == 'error'
+        assert response_in_json['reason'] == 'InvalidSide'
+        self.assertTrue('message' in response_in_json)
 
     def test_buy_btc_usd_with_invalid_timestamp(self):
         currency_symbol = "usdbtc"
@@ -483,10 +483,10 @@ class test_btc_new_order(unittest.TestCase):
                                       headers=request_headers)
         response_in_json = self.response.json()
 
-        # assert self.response.status_code == 400
-        # assert response_in_json['result'] == 'error'
-        # assert response_in_json['reason'] == 'InvalidSymbol'
-        # self.assertTrue('message' in response_in_json)
+        assert self.response.status_code == 400
+        assert response_in_json['result'] == 'error'
+        assert response_in_json['reason'] == 'InvalidSymbol'
+        self.assertTrue('message' in response_in_json)
 
     def test_buy_btc_usd_without_SSL(self):
         base_url = "http://api.gemini.com"
@@ -514,10 +514,10 @@ class test_btc_new_order(unittest.TestCase):
                                       headers=request_headers)
         response_in_json = self.response.json()
 
-        # assert self.response.status_code == 400
-        # assert response_in_json['result'] == 'error'
-        # assert response_in_json['reason'] == 'NoSSL'
-        # self.assertTrue('message' in response_in_json)
+        assert self.response.status_code == 400
+        assert response_in_json['result'] == 'error'
+        assert response_in_json['reason'] == 'NoSSL'
+        self.assertTrue('message' in response_in_json)
 
     def test_buy_btc_usd_without_trader_role(self):
         currency_symbol = "usdbtc"
@@ -544,10 +544,10 @@ class test_btc_new_order(unittest.TestCase):
                                       headers=request_headers)
         response_in_json = self.response.json()
 
-        # assert self.response.status_code == 400
-        # assert response_in_json['result'] == 'error'
-        # assert response_in_json['reason'] == 'MissingRole'
-        # self.assertTrue('message' in response_in_json)
+        assert self.response.status_code == 400
+        assert response_in_json['result'] == 'error'
+        assert response_in_json['reason'] == 'MissingRole'
+        self.assertTrue('message' in response_in_json)
 
     def test_buy_btc_usd_without_sufficient_funds(self):
         # required another account api key and secret without sufficient
@@ -576,10 +576,10 @@ class test_btc_new_order(unittest.TestCase):
                                       headers=request_headers)
         response_in_json = self.response.json()
 
-        # assert self.response.status_code == 400
-        # assert response_in_json['result'] == 'error'
-        # assert response_in_json['reason'] == 'InsufficientFunds'
-        # self.assertTrue('message' in response_in_json)
+        assert self.response.status_code == 400
+        assert response_in_json['result'] == 'error'
+        assert response_in_json['reason'] == 'InsufficientFunds'
+        self.assertTrue('message' in response_in_json)
 
     def test_buy_btc_usd_with_standard_order_with_negative_amount_provided(self):
         currency_symbol = "btcusd"
@@ -602,10 +602,10 @@ class test_btc_new_order(unittest.TestCase):
                                       headers=request_headers)
         response_in_json = self.response.json()
 
-        # assert self.response.status_code == 400
-        #   assert response_in_json['result'] == 'error'
-        #   assert response_in_json['reason'] == 'InvalidQuantity'
-        #   self.assertTrue('message' in response_in_json)
+        assert self.response.status_code == 400
+        assert response_in_json['result'] == 'error'
+        assert response_in_json['reason'] == 'InvalidQuantity'
+        self.assertTrue('message' in response_in_json)
 
     def test_buy_btc_usd_with_standard_order_with_negative_price_provided(self):
         currency_symbol = "btcusd"
@@ -628,10 +628,10 @@ class test_btc_new_order(unittest.TestCase):
                                       headers=request_headers)
         response_in_json = self.response.json()
 
-        # assert self.response.status_code == 400
-    #   assert response_in_json['result'] == 'error'
-    #   assert response_in_json['reason'] == 'InvalidPrice'
-    #   self.assertTrue('message' in response_in_json)
+        assert self.response.status_code == 400
+        assert response_in_json['result'] == 'error'
+        assert response_in_json['reason'] == 'InvalidPrice'
+        self.assertTrue('message' in response_in_json)
 
     def test_buy_btc_usd_with_standard_order_with_negative_price_amount_provided(self):
         currency_symbol = "btcusd"
@@ -655,10 +655,10 @@ class test_btc_new_order(unittest.TestCase):
         response_in_json = self.response.json()
 
         # It will be either InvalidQuantity or InvalidPrice or both
-        # assert self.response.status_code == 400
-        #   assert response_in_json['result'] == 'error'
-        #   assert response_in_json['reason'] == 'InvalidQuantity'
-        #   self.assertTrue('message' in response_in_json)
+        assert self.response.status_code == 400
+        assert response_in_json['result'] == 'error'
+        assert response_in_json['reason'] == 'InvalidQuantity'
+        self.assertTrue('message' in response_in_json)
 
     def test_buy_btc_usd_with_standard_order_with_two_options_provided(self):
         currency_symbol = "btcusd"
@@ -683,10 +683,10 @@ class test_btc_new_order(unittest.TestCase):
                                       headers=request_headers)
         response_in_json = self.response.json()
 
-        # assert self.response.status_code == 400
-        #   assert response_in_json['result'] == 'error'
-        #   assert response_in_json['reason'] == 'ConflictingOptions'
-        #   self.assertTrue('message' in response_in_json)
+        assert self.response.status_code == 400
+        assert response_in_json['result'] == 'error'
+        assert response_in_json['reason'] == 'ConflictingOptions'
+        self.assertTrue('message' in response_in_json)
 
     def test_buy_btc_usd_with_standard_order_with_three_options_provided(self):
         currency_symbol = "btcusd"
@@ -711,10 +711,10 @@ class test_btc_new_order(unittest.TestCase):
                                       headers=request_headers)
         response_in_json = self.response.json()
 
-        # assert self.response.status_code == 400
-        #   assert response_in_json['result'] == 'error'
-        #   assert response_in_json['reason'] == 'ConflictingOptions'
-        #   self.assertTrue('message' in response_in_json)
+        assert self.response.status_code == 400
+        assert response_in_json['result'] == 'error'
+        assert response_in_json['reason'] == 'ConflictingOptions'
+        self.assertTrue('message' in response_in_json)
 
     def test_buy_btc_usd_with_deleted_api_key_and_secret(self):
         currency_symbol = "btcusd"
@@ -739,10 +739,10 @@ class test_btc_new_order(unittest.TestCase):
                                       headers=request_headers)
         response_in_json = self.response.json()
 
-        # assert self.response.status_code == 400
-        #   assert response_in_json['result'] == 'error'
-        #   assert response_in_json['reason'] == 'ConflictingOptions'
-        #   self.assertTrue('message' in response_in_json)
+        assert self.response.status_code == 400
+        assert response_in_json['result'] == 'error'
+        assert response_in_json['reason'] == 'ConflictingOptions'
+        self.assertTrue('message' in response_in_json)
 
     # Sell btc test start from here
     def test_sell_btc_usd_with_standard_order_via_empty_array_without_client_id(self):
@@ -768,14 +768,14 @@ class test_btc_new_order(unittest.TestCase):
                                       headers=request_headers)
         response_in_json = self.response.json()
 
-        # assert self.response.status_code == 400
-        # assert response_in_json['symbol'] == currency_symbol
-        # assert response_in_json['type'] == "exchange limit"
-        # assert response_in_json['side'] == "buy"
-        # assert response_in_json['option'] == []
-        # assert response_in_json['original_amount'] == amount
-        # assert float(response_in_json['executed_amount']) + float(response_in_json['remaining_amount']) == int(5)
-        # self.assertLessEqual(float(response_in_json['avg_execution_price']), float(price))
+        assert self.response.status_code == 400
+        assert response_in_json['symbol'] == currency_symbol
+        assert response_in_json['type'] == "exchange limit"
+        assert response_in_json['side'] == "buy"
+        assert response_in_json['option'] == []
+        assert response_in_json['original_amount'] == amount
+        assert float(response_in_json['executed_amount']) + float(response_in_json['remaining_amount']) == int(5)
+        self.assertLessEqual(float(response_in_json['avg_execution_price']), float(price))
 
     def test_sell_btc_usd_with_standard_order_via_empty_array_with_client_id(self):
         currency_symbol = "btcusd"
@@ -802,15 +802,15 @@ class test_btc_new_order(unittest.TestCase):
                                       headers=request_headers)
         response_in_json = self.response.json()
 
-        # assert self.response.status_code == 400
-        # assert response_in_json['symbol'] == currency_symbol
-        # assert response_in_json['type'] == "exchange limit"
-        # assert response_in_json['side'] == "buy"
-        # assert response_in_json['option'] == []
-        # assert response_in_json['original_amount'] == amount
-        # assert float(response_in_json['executed_amount']) + float(response_in_json['remaining_amount']) == int(5)
-        # assert response_in_json['client_order_id'] == client_order_id
-        # self.assertLessEqual(float(response_in_json['avg_execution_price']), float(price))
+        assert self.response.status_code == 400
+        assert response_in_json['symbol'] == currency_symbol
+        assert response_in_json['type'] == "exchange limit"
+        assert response_in_json['side'] == "buy"
+        assert response_in_json['option'] == []
+        assert response_in_json['original_amount'] == amount
+        assert float(response_in_json['executed_amount']) + float(response_in_json['remaining_amount']) == int(5)
+        assert response_in_json['client_order_id'] == client_order_id
+        self.assertLessEqual(float(response_in_json['avg_execution_price']), float(price))
 
     def test_sell_btc_usd_with_standard_order_with_negative_amount_provided(self):
         currency_symbol = "btcusd"
@@ -837,10 +837,10 @@ class test_btc_new_order(unittest.TestCase):
                                       headers=request_headers)
         response_in_json = self.response.json()
 
-        # assert self.response.status_code == 400
-        #   assert response_in_json['result'] == 'error'
-        #   assert response_in_json['reason'] == 'InvalidQuantity'
-        #   self.assertTrue('message' in response_in_json)
+        assert self.response.status_code == 400
+        assert response_in_json['result'] == 'error'
+        assert response_in_json['reason'] == 'InvalidQuantity'
+        self.assertTrue('message' in response_in_json)
 
     def test_sell_btc_usd_with_standard_order_with_negative_price_provided(self):
         currency_symbol = "btcusd"
@@ -867,10 +867,10 @@ class test_btc_new_order(unittest.TestCase):
                                       headers=request_headers)
         response_in_json = self.response.json()
 
-        # assert self.response.status_code == 400
-        #   assert response_in_json['result'] == 'error'
-        #   assert response_in_json['reason'] == 'InvalidPrice'
-        #   self.assertTrue('message' in response_in_json)
+        assert self.response.status_code == 400
+        assert response_in_json['result'] == 'error'
+        assert response_in_json['reason'] == 'InvalidPrice'
+        self.assertTrue('message' in response_in_json)
 
     def test_sell_btc_usd_with_standard_order_with_negative_price_amount_provided(self):
         currency_symbol = "btcusd"
@@ -897,10 +897,10 @@ class test_btc_new_order(unittest.TestCase):
                                       headers=request_headers)
         response_in_json = self.response.json()
 
-        # assert self.response.status_code == 400
-        #   assert response_in_json['result'] == 'error'
-        #   assert response_in_json['reason'] == 'InvalidPrice'
-        #   self.assertTrue('message' in response_in_json)
+        assert self.response.status_code == 400
+        assert response_in_json['result'] == 'error'
+        assert response_in_json['reason'] == 'InvalidPrice'
+        self.assertTrue('message' in response_in_json)
 
 if __name__ == '__main__':
     unittest.main()
